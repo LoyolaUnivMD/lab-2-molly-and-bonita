@@ -2,12 +2,10 @@
 2. ask for the player's name
 3. create String variable lottery and set to ""
 4. create variable num and set to 0
-5. create variable jackpot and set to 550,000
-6. for 10 repetitions:
+5. for 10 repetitions:
     a. for 6 repetitions:
         i. choose random number 0-99 and set it to num
         ii. add num with a space to lottery
     b. output lottery to the user
- 7. Output "Good Luck" with users first name (use split and strip)
- 8. Output estimated jackpot
-...
+ 6. Output "Good Luck" with users first name (use split and strip)
+ 7. Output estimated jackpot
