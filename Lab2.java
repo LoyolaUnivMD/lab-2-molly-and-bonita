@@ -35,8 +35,8 @@ class Lab2 {
             for(int j=0 ; j < 6 ; j++) {
 
                 num = rand.nextInt(99);
-                DecimalFormat numFormat = dfmt.format(num);
-                System.out.println(num);
+                //DecimalFormat numFormat = dfmt.format(num);
+                System.out.println(dfmt.format(num));
 //
 
 //                String lottery =
