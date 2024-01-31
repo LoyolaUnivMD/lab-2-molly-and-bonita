@@ -17,9 +17,7 @@ class Lab2 {
 
         System.out.println("CS 212 - Lab 2");
         System.out.println("This program generates 10 lottery tickets.");
-        
         System.out.print("What's your name? ");
-
         String customerName = input.nextLine();
 
 
