@@ -1,12 +1,11 @@
-// Programmers:  [your names here]
-// Course:  CS 212
-// Due Date:
-// Lab Assignment:
-// Problem Statement:
-// Data In:
-// Data Out:
-// Credits: [Is your code based on an example in the book, in class, or something else?
-//            Reminder: you should never take code from the Internet or another person
+// Programmers: Bonita Rodrigues, Molly Kyle
+// Course:  CS 212, Dr.Nweke
+// Due Date: 2/3/24
+// Lab Assignment: Lab2 Lottery Tickets
+// Problem Statement:  This program will output 10 lottery tickets (each having 6 numbers) to the user.
+// Input: name
+// Output: 10 tickets (each w/ 6 numbers), Outputs good luck statement (w/ users first name), estimated jackpot
+// Credits: none
 
 import java.util.Scanner;
 import java.util.Random;
@@ -19,29 +18,38 @@ class Lab2 {
 
         //Making object rand
         Random rand = new Random();
+        //Making object dfmt
+        DecimalFormat dfmt = new DecimalFormat("#00");
 
-        //Making object decimal format
-        DecimalFormat dfmt = new DecimalFormat("##00");
-
+        // Opening statements
         System.out.println("CS 212 - Lab 2");
-        System.out.println("This program generates 10 lottery tickets.");
+        System.out.println("\nThis program generates 10 lottery tickets.");
+        // User input (users name)
         System.out.print("What's your name? ");
         String customerName = input.nextLine();
+        System.out.println("\nHere is your ticket: ");
+        // Initializes num used later for random numbers
 
-        String lottery = "";
-        int num = 0;
-        int numFormat = 0;
+        // Nested for loop (10 tickets each with 6 numbers)
         for(int i=0 ; i < 10 ; i++) {
             for(int j=0 ; j < 6 ; j++) {
-
-                num = rand.nextInt(99);
-                //DecimalFormat numFormat = dfmt.format(num);
-                System.out.println(dfmt.format(num));
-//
-
-//                String lottery =
+                int num = rand.nextInt(99);
+                System.out.print(dfmt.format(num) + " ");
             }
+            // Shifts to the next line (so tickets are formatted correctly)
+            System.out.println(" ");
         }
+
+        // Checks if the user entered last name and takes only the first name
+        customerName = customerName.strip();
+        if (customerName.contains(" ")) {
+            String[] smth = customerName.split(" "); // turns string into a list
+            customerName = smth[0]; // calls first item in list (first name)
+        }
+
+        // Ending statements
+        System.out.println("\nGood luck " + customerName + "!");
+        System.out.println("The Estimated Jackpot:\n" + prize);
 
     }
 }
