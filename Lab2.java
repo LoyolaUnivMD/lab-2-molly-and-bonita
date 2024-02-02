@@ -24,9 +24,16 @@ class Lab2 {
         // Opening statements
         System.out.println("CS 212 - Lab 2");
         System.out.println("\nThis program generates 10 lottery tickets.");
+
         // User input (users name)
         System.out.print("What's your name? ");
         String customerName = input.nextLine();
+
+        //Ask for amount they want to gamble
+        System.out.println("How much money would you like to bet?");
+        double BetAmount = input.nextFloat();
+
+
         System.out.println("\nHere is your ticket: ");
         // Initializes num used later for random numbers
 
@@ -34,6 +41,9 @@ class Lab2 {
         for(int i=0 ; i < 10 ; i++) {
             for(int j=0 ; j < 6 ; j++) {
                 int num = rand.nextInt(99);
+                if (num == 3 ||  num == 5 || num == 16 || num == 58 || num == 59 || num == 11){
+                    BetAmount = BetAmount * 1.75; //Multiply amount bet by .175 every time number generated matches one of the winning numbers
+                }
                 System.out.print(dfmt.format(num) + " ");
             }
             // Shifts to the next line (so tickets are formatted correctly)
@@ -47,9 +57,11 @@ class Lab2 {
             customerName = smth[0]; // calls first item in list (first name)
         }
 
+
+
         // Ending statements
         System.out.println("\nGood luck " + customerName + "!");
-        System.out.println("The Estimated Jackpot:\n" + prize);
+        System.out.println("You won:\n" + "$" + BetAmount);
 
     }
 }
