@@ -1,12 +1,15 @@
 1. print out description of the program
-2. ask for the player's name
-4. create variable num and set to 0
-5. Output "here is your ticket: " to the user
-5. for 10 repetitions:
+2. ask for the player's name (set to customerName)
+3. ask player how much they want to bet (set to BetAmount)
+4. If there is a space in customerName take first name (use split and stip)
+5. output how much user wants to bet
+6. output "here is your ticket: " to the user
+7. for 10 repetitions:
     a. for 6 repetitions:
         i. choose random number 0-99 and set it to num
         ii. print out num with space (use print so its on the same line)
+        ii. if num matches any of the winning numbers
+            1. raise betAmount by 1.75
     b. print a new line
- 6. If there is a space in customerName take first name (use split and stip)
- 7. Output "Good Luck" with users first name
- 8. Output estimated jackpot
+ 8. Output "Good Luck" with users first name
+ 9. Output BetAmount
